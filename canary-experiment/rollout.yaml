@@ -36,7 +36,7 @@ spec:
       stableService: rollout-stable-service  # required
       trafficRouting:
         nginx:
-          stableIngress: primary-ingress  # required
+          stableIngress: rollout-example-ingress  # required
           annotationPrefix: customingress.nginx.ingress.kubernetes.io # optional
           additionalIngressAnnotations:   # optional
             canary-by-header: X-Canary
