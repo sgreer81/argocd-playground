@@ -32,34 +32,31 @@ spec:
         - pause: { duration: 20s }
         - setWeight: 80
         - pause: { duration: 20s }
-      canaryService: example-application-stable  # required
-      stableService: example-application-canary  # required
+      canaryService: example-application-canary # required
+      stableService: example-application-stable # required
       trafficRouting:
         nginx:
-          stableIngress: example-application-stable  # required
-
+          stableIngress: example-application-stable # required
 
 ---
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: example-application-stable
 spec:
   rules:
-  - host: "example-application.local.com"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: example-application-stable
-            port:
-              number: 8080
+    - host: "example-application.local.com"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: example-application-stable
+                port:
+                  number: 8080
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -73,7 +70,6 @@ spec:
       targetPort: 8080
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
