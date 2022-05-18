@@ -36,7 +36,7 @@ spec:
       stableService: example-application-canary  # required
       trafficRouting:
         nginx:
-          stableIngress: example-application-ingress  # required
+          stableIngress: example-application-stable  # required
 
 
 ---
