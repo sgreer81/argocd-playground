@@ -57,6 +57,16 @@ spec:
             name: example-application-stable
             port:
               number: 8080
+  - host: "example-application.local.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: example-application-canary
+            port:
+              number: 8080
 
 ---
 
