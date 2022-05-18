@@ -50,6 +50,8 @@ kind: Ingress
 metadata:
   name: rollout-example-ingress
 spec:
+  selector:
+    app: rollout-example-ingress
   rules:
   - http:
       paths:
