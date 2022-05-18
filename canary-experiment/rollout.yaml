@@ -32,3 +32,18 @@ spec:
         - pause: { duration: 20s }
         - setWeight: 80
         - pause: { duration: 20s }
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: rollout-canary
+spec:
+  type: LoadBalancer
+  selector:
+    app: rollout-canary
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
