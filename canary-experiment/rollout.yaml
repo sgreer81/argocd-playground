@@ -65,7 +65,7 @@ metadata:
   name: rollout-stable-service
 spec:
   selector:
-    app: rollout-stable-service
+    app: rollout-canary
   ports:
     - protocol: TCP
       port: 8080
@@ -79,7 +79,7 @@ metadata:
   name: rollout-canary-service
 spec:
   selector:
-    app: rollout-canary-service
+    app: rollout-canary
   ports:
     - protocol: TCP
       port: 8080
