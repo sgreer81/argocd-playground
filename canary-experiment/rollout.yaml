@@ -44,7 +44,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: example-application-ingress
+  name: example-application-stable
 spec:
   rules:
   - host: "example-application.local.com"
@@ -55,16 +55,6 @@ spec:
         backend:
           service:
             name: example-application-stable
-            port:
-              number: 8080
-  - host: "example-application.local.com"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: example-application-canary
             port:
               number: 8080
 
