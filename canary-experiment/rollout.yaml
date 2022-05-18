@@ -47,7 +47,8 @@ metadata:
   name: example-application-ingress
 spec:
   rules:
-  - http:
+  - host: "example-application.local.com"
+    http:
       paths:
       - path: /
         pathType: Prefix
