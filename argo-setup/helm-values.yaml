@@ -1,3 +1,6 @@
 server:
   extensions:
     enabled: true
+    contents:
+      - name: argo-rollouts
+        url: https://github.com/argoproj-labs/rollout-extension/releases/download/v0.2.0/extension.tar
